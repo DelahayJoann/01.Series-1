@@ -6,11 +6,10 @@
 
     document.getElementById("run").addEventListener("click", () => {
         let array=[];
-        for (i=1;i<Math.sqrt(22);i++){
-            array.push(i ** 2);
+        for (i=1;i<22;i++){
+            (Math.sqrt(i) == Math.round(Math.sqrt(i)))? array.push(i):'';
         }
-        alert(array);
-        
+        alert(array);   
     });
 
 })();
