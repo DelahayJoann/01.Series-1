@@ -17,6 +17,9 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        const yesno = Boolean(fruits.find(element => element == 'apple'));
+        console.log(yesno);
+    });
 
 })();

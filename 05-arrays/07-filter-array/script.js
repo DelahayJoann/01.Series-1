@@ -80,6 +80,12 @@
         },
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        let array = [];
+        people.forEach((elem) => {
+            (elem.age > 18)? array.push(elem):'';
+        });
+        console.log(array);
+    });
 
 })();

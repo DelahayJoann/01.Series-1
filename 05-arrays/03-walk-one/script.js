@@ -18,6 +18,8 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        for(elem of fruits) console.log(elem);
+    });
 
 })();

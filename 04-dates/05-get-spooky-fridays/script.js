@@ -11,7 +11,7 @@
         }
         return count;                            
     }
-    document.getElementById("run").addEventListener("click", function() {
+    document.getElementById("run").addEventListener('click', function() {
         alert(count13(Number.parseInt(document.getElementById('year').value)));
     });
 })();

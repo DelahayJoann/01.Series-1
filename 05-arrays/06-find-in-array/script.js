@@ -80,6 +80,10 @@
         },
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        people.forEach((elem,index) => {
+            ((elem.firstname == 'Jean') && (elem.lastname == 'Dupont'))? console.log(`${elem.firstname} ${elem.lastname} Email: ${elem.email} Index: ${index}`):'';
+        });
+    });
 
 })();
