@@ -20,6 +20,10 @@
         "cerise",
     ];
 
-    // your code here
-
+    document.getElementById('run').addEventListener('click', function(){
+        myfruits = fruits;
+        var mySet = new Set(myfruits);
+        myfruits = [...mySet];
+        console.log(myfruits);
+    });
 })();

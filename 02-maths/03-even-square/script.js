@@ -6,11 +6,9 @@
 
     document.getElementById("run").addEventListener("click", () => {
         let array=[];
-        let text;
-        for (i=1;i<22;i++){
-            array.push(Math.sqrt(i));
+        for (i=1;i<Math.sqrt(22);i++){
+            array.push(i ** 2);
         }
-        
         alert(array);
         
     });

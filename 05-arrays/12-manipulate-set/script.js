@@ -15,5 +15,22 @@
         "cherry",
     ]);
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function(){
+        const removeSet = new Set([
+            "apple",
+            "cherry",
+            "banana",
+            "kiwi"
+        ]);
+        let newSet = fruits;
+        removeFromFruits(newSet,removeSet);
+        console.log(newSet);
+    });
+
+    function removeFromFruits(theFruits, removeSet) {
+        [...removeSet].forEach(function(v) {
+          theFruits.delete(v); 
+        });
+    }
+
 })();
