@@ -3,6 +3,11 @@
 
 (() => {
 
-    // your code here
+var image = document.querySelector('img');
+let normal = image.src;
+let hover = image.getAttribute('data-hover');
+
+image.onmouseover = function() {  image.src = hover;  }
+image.onmouseout = function() {  image.src = normal; }
 
 })();

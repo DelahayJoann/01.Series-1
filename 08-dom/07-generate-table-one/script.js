@@ -2,7 +2,19 @@
 
 
 (() => {
+    let target = document.getElementById('target');
 
-    // your code here
+    let table = document.createElement('table');
 
+    table.style.width = '50%';
+    table.style.border = '1px solid black';
+    
+
+    for(i=0;i<10;i++){
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+        tr.appendChild(td);
+        table.appendChild(tr);
+    }
+    target.appendChild(table);
 })();

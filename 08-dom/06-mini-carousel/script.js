@@ -11,6 +11,15 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    let image = document.querySelector('img');
+    let iterable = gallery[Symbol.iterator]();
+    image.src = iterable.next().value;
+    let i = 1;
+
+    document.getElementById("next").addEventListener("click", () => {  
+            if(i < gallery.length)image.src = iterable.next().value;
+            i++;
+    });
+    
 
 })();

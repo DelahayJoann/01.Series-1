@@ -3,6 +3,8 @@
 
 (() => {
 
-    // your code here
+    document.querySelectorAll(".target").forEach( target => {
+        target.innerHTML = "Owned!";
+    });
 
 })();

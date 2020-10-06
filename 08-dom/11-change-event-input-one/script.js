@@ -2,7 +2,10 @@
 
 
 (() => {
-
-    // your code here
-
+    let inputToListen = document.getElementById('pass-one');
+    let counter = document.getElementsByClassName('indicator')[0];
+    inputToListen.setAttribute('maxlength','10');
+    inputToListen.addEventListener('input', function () {
+        counter.textContent = `${inputToListen.value.length}/10`;
+    });
 })();

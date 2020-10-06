@@ -3,6 +3,13 @@
 
 (() => {
 
-    // your code here
+        let source = document.getElementById('source');
+        let target = document.getElementById('target');
 
+        let img = document.createElement('img');
+        img.src = source.getAttribute('data-image');
+
+        target.appendChild(img);
+
+        source.parentNode.removeChild(source);
 })();
