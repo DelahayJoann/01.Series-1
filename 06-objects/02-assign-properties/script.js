@@ -18,5 +18,16 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+    let theComputers = computers;
+    let temp = {};
+
+    document.getElementById('run').addEventListener('click', function(){
+        for(object of theComputers){
+            Object.assign(temp,defaultProps);
+            Object.assign(temp, object);
+            Object.assign(object,temp);
+        }
+        for(elem of theComputers) console.log(JSON.stringify(elem));
+    });
 })();

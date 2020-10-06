@@ -2,5 +2,15 @@
 
 
 (() => {
-    // your code here
+    const Person = {
+        Firstname: "Joann",
+        Lastname: "D.",
+        Age: "37",
+        City: "Nivelles",
+        Country: "Belgique"
+      }
+
+      document.getElementById('run').addEventListener('click', function(){
+        console.log(Person);
+    });
 })();

@@ -10,8 +10,9 @@
         let year = document.getElementById("dob-year");
         let month = document.getElementById("dob-month");
         let day = document.getElementById("dob-day");
-        let enterDate = new Date(Number.parseInt(year.options[year.selectedIndex].value), Number.parseInt(month.options[month.selectedIndex].value), Number.parseInt(day.options[day.selectedIndex].value));
+        let enterDate = new Date(Number.parseInt(year.options[year.selectedIndex].value), Number.parseInt(month.options[month.selectedIndex].value -1), Number.parseInt(day.options[day.selectedIndex].value),23,59,59);
         alert(`You are ${Age(enterDate)} years old`);
+        console.log(enterDate);
     });
 
     function Age(dob) {
