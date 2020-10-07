@@ -3,6 +3,12 @@
 
 (() => {
 
-    // your code here
+    var slider = document.getElementById("slider");
+    var target = document.getElementById("target");
+    target.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        target.innerHTML = '0'+this.value;
+    } 
 
 })();
