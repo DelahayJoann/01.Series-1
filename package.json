@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "api": "npx json-server ./_shared/api.json"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }

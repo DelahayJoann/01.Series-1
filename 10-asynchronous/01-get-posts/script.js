@@ -2,5 +2,13 @@
 
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', ()=>{
+        
+        window.lib.getPosts(async (err, articlesTable) =>{
+            if(err){
+                console.log(err);
+            }
+            for(elem of articlesTable)console.log(elem);
+        });
+    });
 })();

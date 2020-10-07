@@ -2,7 +2,14 @@
 
 
 (() => {
+    let b_increment = document.getElementById('increment');
+    let target = document.getElementById('target');
+    let counter = Number.parseInt(localStorage.getItem("counter")) || 0;
+    target.innerHTML = counter;
 
-    // your code here
-
+    b_increment.addEventListener('click', ()=>{
+        counter++;
+        localStorage.setItem("counter", counter);
+        target.innerHTML = counter;
+    });
 })();
