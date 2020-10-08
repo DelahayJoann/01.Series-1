@@ -22,9 +22,10 @@
     .then(response => response.json())
     .then(data => {
         for(hero of data){
-            name.innerHTML = data['name'];
-            alterEgo.innerHTML = data['alterEgo'];
-            p.innerHTML = data['abilities'];
+            theData = JSON.parse(data);
+            name.innerHTML = theData['name'];
+            alterEgo.innerHTML = theData['alterEgo'];
+            p.innerHTML = theData['abilities'];
         }
         target.appendChild(heroes);
     });
