@@ -2,5 +2,16 @@
 
 
 (() => {
-    // your code here
+
+    document.getElementById('run').addEventListener('click', ()=>{
+        
+        window.lib.getPersons((err, personsTable) =>{
+            if(err){
+                console.error(err);
+            }else{
+                console.log(personsTable);
+            }
+        });
+    });
+    
 })();

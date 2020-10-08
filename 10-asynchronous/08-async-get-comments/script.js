@@ -2,5 +2,12 @@
 
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', async ()=>{
+        let tabArts = await window.lib.getPosts();
+        await Promise.all(tabArts.map(async (article) => {
+            let tabcomms = await window.lib.getComments(article.id);
+            article.comments = tabcomms;
+        }));
+        console.log(tabArts);
+    });
 })();

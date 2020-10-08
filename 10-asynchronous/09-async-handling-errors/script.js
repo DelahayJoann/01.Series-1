@@ -2,5 +2,14 @@
 
 
 (() => {
-    // your code here
+    (() => {
+        document.getElementById('run').addEventListener('click', async ()=>{
+            try{
+                console.log(await window.lib.getPersons());
+            }
+            catch(e){
+                console.error(e);
+            }
+        });
+    })();
 })();

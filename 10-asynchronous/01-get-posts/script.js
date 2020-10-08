@@ -4,7 +4,7 @@
 (() => {
     document.getElementById('run').addEventListener('click', ()=>{
         
-        window.lib.getPosts(async (err, articlesTable) =>{
+        window.lib.getPosts((err, articlesTable) =>{
             if(err){
                 console.log(err);
             }
