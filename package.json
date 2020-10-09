@@ -6,6 +6,8 @@
     "api": "npx json-server ./_shared/api.json"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "require": "^2.4.20",
+    "sync-request": "^6.1.0"
   }
 }
