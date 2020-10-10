@@ -19,15 +19,15 @@
         user: null,
     };
 
-    let theComputers = computers;
-    let temp = {};
+    let theComputers = computers; // Copie du tableau d'Object computers (car const)
+    let temp = {}; // Variable Object qui servira à récupérer l'Object defaultProps qui est également const.
 
     document.getElementById('run').addEventListener('click', function(){
-        for(object of theComputers){
-            Object.assign(temp,defaultProps);
-            Object.assign(temp, object);
-            Object.assign(object,temp);
+        for(object of theComputers){ // Je fais une boucle sur chacun des éléments (object en minuscule) du tableau theComputers (qui est une copie de computers) 
+            Object.assign(temp,defaultProps); // La fonction static Object.assign() copie les propriétés du 2ème élément de la parenthèse sur le premier mais n'écrase pas celles que lui ne possèdent pas.
+            Object.assign(temp, object); // J'assigne le contenu de object qui correspond à un élément du tableau theComputers sur ma variable temp qui contient les éléments de defaultProps et donc il remplacera ce que lui possède seulement et ajoutera ce qui n'existe pas.
+            Object.assign(object,temp); // Maintenant que temp contient ses propriétés de base + celle remplacé par les propriétés que object avait, je recopie temps sur object pour lui donner le résultat de la "fusion"
         }
-        for(elem of theComputers) console.log(JSON.stringify(elem));
+        for(elem of theComputers) console.log(JSON.stringify(elem)); // J'affiche chacun des éléments, maintenant modifié par la boucle précédente, qui se trouve dans theComputers.
     });
 })();
