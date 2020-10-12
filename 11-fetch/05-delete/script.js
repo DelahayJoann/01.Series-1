@@ -4,12 +4,10 @@
 (() => {
 
     let aNewHero = new Object();
-    let last;
 
     document.getElementById('run').addEventListener('click', ()=>{
         var xhr = new XMLHttpRequest();
         xhr.open("DELETE", 'http://localhost:3000/heroes/'+document.getElementById('hero-id').value, true);
-        
         xhr.send(null);
 
         fetch('http://localhost:3000/heroes')
