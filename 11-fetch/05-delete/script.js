@@ -10,11 +10,14 @@
         xhr.open("DELETE", 'http://localhost:3000/heroes/'+document.getElementById('hero-id').value, true);
         xhr.send(null);
 
-        fetch('http://localhost:3000/heroes')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        });
-
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                fetch('http://localhost:3000/heroes')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                });
+            }
+          };      
     });
 })();
